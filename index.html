@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Form</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration</legend>
+        <form action="validator.js" method="post" enctype="multipart/form-data" name="for_reg" autocomplete="on">
+            <label class="field" >
+                <span for="">Lable</span>
+                <input type="text" placeholder="text" required  name="userName" autofocus  maxlength="10"
+                pattern="[A-Za-z]{2,20}"  autocomplete="off">
+            </label>
+            <label class="field">
+                <span for="">Password</span>
+                <input type="password" placeholder="Enter your password" required  name="userPass" autofocus 
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off">
+            </label>
+            <label class="field">
+                    <span for="">Email</span>
+                    <input type="email" placeholder="Enter your email" required  name="userEmail" 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </label>
+            <label class="field">
+                <span for="">Date</span>
+                <input type="date" placeholder="Enter your date">
+            </label>
+            <label class="field">
+                <span for="">Time</span>
+                <input type="time" placeholder="Enter your time">
+            </label>
+            <label class="field">
+                <span for="">Description</span>
+                <textarea placeholder="Enter your description"  name="dopInfo"  maxlength="255" readonly></textarea>
+            </label>
+            <label for="userAdress"></label>
+                <span>Country</span>
+                <select name="userAddress" id="userAddress" multiple size="2">
+                    <optgroup label="Страна"> 
+                        <option value="#" disabled selected> Ваша страна:</option>
+                        <option value="Germany">Германия</option>
+                        <option value="Ukraine">Украина</option>
+                        <option value="Spain">Испания</option>
+                    </optgroup>
+                    <optgroup label="Город"> 
+                        <option value="#" disabled selected> Ваш город:</option>
+                        <option value="Germany">Берлин</option>
+                        <option value="Ukraine">Киев</option>
+                        <option value="Spain">Мадрид</option>
+                    </optgroup>
+                </select>
+                <div class="box">
+                    <label for="#" class="checkbox__label">
+                        <input class="checkbox" type="checkbox" name="#" id="#">
+                        <span class="checkbox__custom">
+                            <span class="checkbox__icon"></span>
+                        </span>
+                        <span class="lable">Turn on</span>
+                    </label>
+                    <label >
+                        <input type="radio" class="radio" name="#" >
+                        <span class="radio_custom"></span>
+                        <span class="label">Radio</span>
+                    </label>
+    
+    
+                    <div>
+                        <input type="checkbox" class="switch" id="name">
+                        <label for="name"></label>
+                    </div>
+                </div>
+                <label for="" class="field">
+                    <input id="btn" type="reset" value="Reset" >
+                </label>
+        </form>
+    </fieldset>
+    <script>
+            btn.addEventListener("mouseover", function() {
+                this.value = "Seriously ???";
+        })
+        
+            btn.addEventListener("mouseout", function() {
+                this.value = "Reset";
+        })
+    </script>
+</body>
+
+</html>
